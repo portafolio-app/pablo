@@ -1,23 +1,22 @@
-<nav class="w-full bg-gray-900 text-white flex items-center justify-between px-6 py-3 shadow-lg">
-  <div class="flex items-center gap-3">
-    <span class="font-bold text-xl">Jcv Code</span>
+<nav id="navbar" class="w-full bg-gray-900 text-white flex flex-col items-center px-0 py-3 shadow-lg sticky top-0 z-50 relative">
+  <div class="w-full max-w-3xl flex flex-col md:flex-row items-center justify-center gap-4 px-4">
+    <div class="flex items-center gap-3">
+      <!--<span class="font-bold text-xl">Jcv Code</span>-->
+    </div>
+    <ul class="hidden md:flex items-center gap-6 text-sm font-medium">
+      <li class="flex items-center gap-1 cursor-pointer hover:text-green-400 transition"><i class="fa fa-home"></i> Home</li>
+      <li class="flex items-center gap-1 cursor-pointer hover:text-green-400 transition"><i class="fa fa-folder"></i> Proyectos</li>
+      <li class="flex items-center gap-1 cursor-pointer hover:text-green-400 transition"><i class="fa fa-cogs"></i> Tecnologías</li>
+      <li class="flex items-center gap-1 cursor-pointer hover:text-green-400 transition"><i class="fa fa-user"></i> Sobre mi</li>
+    </ul>
+    <div class="flex items-center gap-3">
+      <button class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-semibold flex items-center gap-2 transition"><i class="fa fa-envelope"></i> Contacto</button>
+      <button id="themeToggle" (click)="toggleDarkMode()" class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100 p-2 rounded shadow hover:bg-gray-300 dark:hover:bg-gray-600 transition flex items-center justify-center">
+        <i id="themeIcon" class="fas fa-moon text-xl dark:hidden"></i>
+        <i id="themeIconSun" class="fas fa-sun text-xl hidden dark:inline"></i>
+      </button>
+    </div>
   </div>
-  <ul class="hidden md:flex items-center gap-6 text-sm font-medium">
-    <li class="flex items-center gap-1 cursor-pointer hover:text-green-400 transition"><i class="fa fa-home"></i> Home</li>
-    <li class="flex items-center gap-1 cursor-pointer hover:text-green-400 transition"><i class="fa fa-folder"></i> Proyectos</li>
-    <li class="flex items-center gap-1 cursor-pointer hover:text-green-400 transition"><i class="fa fa-cogs"></i> Tecnologías</li>
-    <li class="flex items-center gap-1 cursor-pointer hover:text-green-400 transition"><i class="fa fa-user"></i> Sobre mi</li>
-  </ul>
-  <div class="flex items-center gap-3">
-    <button class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-semibold flex items-center gap-2 transition"><i class="fa fa-envelope"></i> Contacto</button>
-    <button (click)="toggleDarkMode()" class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100 px-3 py-1 rounded shadow hover:bg-gray-300 dark:hover:bg-gray-600 transition flex items-center gap-2">
-      <span id="modeText">Modo Claro / Nocturno</span>
-      <lord-icon
-        src="https://cdn.lordicon.com/nocovwne.json"
-        trigger="click"
-        colors="primary:#121331,secondary:#08a88a"
-        style="width:32px;height:32px">
-      </lord-icon>
-    </button>
-  </div>
+  <hr class="w-full border-t border-gray-700 absolute left-0 bottom-0 m-0 p-0" />
 </nav>
+

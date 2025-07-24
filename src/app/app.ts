@@ -8,6 +8,7 @@ import { Certificaciones } from './certificaciones/certificaciones';
 import { Proyectos } from './proyectos/proyectos';
 import { Habilidades } from './habilidades/habilidades';
 import { Navbar } from './navbar/navbar';
+import { FooterComponent } from './footer/footer';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,8 @@ import { Navbar } from './navbar/navbar';
     Educacion,
     Certificaciones,
     Proyectos,
-    Habilidades
+    Habilidades,
+    FooterComponent
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'

@@ -1,35 +1,32 @@
-
-<!-- Botón modo claro/nocturno -->
-<div class="flex justify-end p-4">
-  <button onclick="toggleDarkMode()" class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100 px-3 py-1 rounded shadow hover:bg-gray-300 dark:hover:bg-gray-600 transition flex items-center gap-2">
-    <span id="modeText">Modo Claro / Nocturno</span>
-    <i class="fas fa-moon dark:hidden"></i>
-    <i class="fas fa-sun hidden dark:inline"></i>
-  </button>
-</div>
-
 <!-- Perfil -->
-<section class="max-w-3xl mx-auto px-4 py-4 flex flex-col items-center gap-4">
-  <div class="flex flex-col items-center gap-4">
-    <img src="perfil.jpg" alt="Foto de perfil" class="w-32 h-32 rounded-lg object-cover shadow" />
-    <h1 class="text-3xl font-bold text-center">Pablo Jose Manuel Cruzado Garcia</h1>
-    <p class="font-medium text-center">Ingeniero de software con experiencia en proyectos fullstack & Creador de Contenido</p>
-    <div class="flex flex-col gap-3 mt-2 items-center">
-      <div class="flex gap-3">
-        <a href="mailto:nelcruzado2004@gmail.com" class="text-xl hover:text-blue-500">
-          <img src="https://cdn.jsdelivr.net/gh/tandpfun/skill-icons/icons/Gmail-Dark.svg" alt="Gmail" class="w-20 h-20 rounded-xl" />
-        </a>
-        <a href="tel:+51958894566" class="text-xl hover:text-blue-500">
-          <img src="https://cdn.jsdelivr.net/gh/tandpfun/skill-icons/icons/Phone.svg" alt="Teléfono" class="w-20 h-20 rounded-xl" />
-        </a>
-        <a href="https://linkedin.com/pcruzadog" target="_blank" class="text-xl hover:text-blue-500">
-          <img src="https://cdn.jsdelivr.net/gh/tandpfun/skill-icons/icons/LinkedIn.svg" alt="LinkedIn" class="w-20 h-20 rounded-xl" />
-        </a>
-        <a href="https://github.com/PabloCruzadoG" target="_blank" class="text-xl hover:text-blue-500">
-          <img src="https://cdn.jsdelivr.net/gh/tandpfun/skill-icons/icons/Github-Dark.svg" alt="GitHub" class="w-20 h-20 rounded-xl" />
-        </a>
-      </div>
-      <a href="https://drive.google.com/tu-enlace-cv" target="_blank" class="bg-gray-800 text-white px-4 py-1 rounded mt-2 w-fit hover:bg-gray-900 transition block text-center">Download CV</a>
+<section class="max-w-4xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center gap-8">
+  <!-- Foto -->
+  <div class="flex-shrink-0">
+    <img src="/70690981.png" alt="Foto de perfil" class="w-40 h-40 rounded-xl object-cover shadow" />
+  </div>
+  
+  <!-- Info -->
+  <div class="flex flex-col items-center md:items-start gap-3 w-full">
+    <h1 class="text-4xl font-extrabold text-center md:text-left">Pablo Jose Manuel Cruzado Garcia</h1>
+    <p class="font-medium text-center md:text-left text-lg">
+      {{ textoBase }}
+      <span class="whitespace-pre text-teal-400">{{ textoAnimado }}</span>
+      <span class="inline-block w-2 h-6 align-middle bg-teal-400 animate-pulse ml-0.5" style="vertical-align:baseline;"></span>
+    </p>
+    
+    <div class="flex gap-2 mt-2">
+      <a href="https://linkedin.com/pcruzadog" target="_blank" class="bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 p-2 rounded transition" title="LinkedIn">
+        <img src="https://cdn.jsdelivr.net/gh/tandpfun/skill-icons/icons/LinkedIn.svg" alt="LinkedIn" class="w-6 h-6" />
+      </a>
+      <a href="https://github.com/PabloCruzadoG" target="_blank" class="bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 p-2 rounded transition" title="GitHub">
+        <img src="https://cdn.jsdelivr.net/gh/tandpfun/skill-icons/icons/Github-Dark.svg" alt="GitHub" class="w-6 h-6" />
+      </a>
+      <a href="mailto:nelcruzado2004@gmail.com" class="bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 p-2 rounded transition" title="Gmail">
+        <img src="https://cdn.jsdelivr.net/gh/tandpfun/skill-icons/icons/Gmail-Dark.svg" alt="Gmail" class="w-6 h-6" />
+      </a>
+      <a href="tel:+51958894566" class="bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 p-2 rounded transition flex items-center justify-center" title="Llamar">
+        <lord-icon src="https://cdn.lordicon.com/ssvybplt.json" trigger="hover" colors="primary:#0e1726,secondary:#22d3ee" style="width:24px;height:24px;"></lord-icon>
+      </a>
     </div>
   </div>
 </section>
