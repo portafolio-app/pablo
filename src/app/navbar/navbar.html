@@ -12,8 +12,22 @@
     <div class="flex items-center gap-3">
       <button class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-semibold flex items-center gap-2 transition"><i class="fa fa-envelope"></i> Contacto</button>
       <button id="themeToggle" (click)="toggleDarkMode()" class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100 p-2 rounded shadow hover:bg-gray-300 dark:hover:bg-gray-600 transition flex items-center justify-center">
-        <i id="themeIcon" class="fas fa-moon text-xl dark:hidden"></i>
-        <i id="themeIconSun" class="fas fa-sun text-xl hidden dark:inline"></i>
+        <ng-container *ngIf="isDarkMode">
+          <lord-icon
+            src="https://cdn.lordicon.com/psnhyobz.json"
+            trigger="hover"
+            colors="primary:#121331,secondary:#08a88a"
+            style="width:32px;height:32px">
+          </lord-icon>
+        </ng-container>
+        <ng-container *ngIf="!isDarkMode">
+          <lord-icon
+            src="https://cdn.lordicon.com/etqbfrgp.json"
+            trigger="hover"
+            colors="primary:#fbbf24,secondary:#f59e42"
+            style="width:32px;height:32px">
+          </lord-icon>
+        </ng-container>
       </button>
     </div>
   </div>

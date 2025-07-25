@@ -1,5 +1,6 @@
 
-import { Component, signal } from '@angular/core';
+import { Component, signal, OnInit } from '@angular/core';
+import { initFlowbite } from 'flowbite';
 import { RouterOutlet } from '@angular/router';
 import { Perfil } from './perfil/perfil';
 import { SobreMi } from './sobre-mi/sobre-mi';
@@ -25,6 +26,10 @@ import { FooterComponent } from './footer/footer';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
+export class App implements OnInit {
   protected readonly title = signal('portafolio-angular');
+
+  ngOnInit(): void {
+    initFlowbite();
+  }
 }

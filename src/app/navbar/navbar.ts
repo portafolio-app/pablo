@@ -1,14 +1,31 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
   templateUrl: './navbar.html',
-  styleUrl: './navbar.css',
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  styleUrls: ['./navbar.css'],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  imports: [CommonModule]
 })
-export class Navbar {
+export class Navbar implements OnInit {
+  isDarkMode = true;
+
+  ngOnInit() {
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      document.body.classList.add('dark'); // Inicia en modo oscuro solo en navegador
+    }
+  }
+
   toggleDarkMode() {
-    document.documentElement.classList.toggle('dark');
+    this.isDarkMode = !this.isDarkMode;
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      if (this.isDarkMode) {
+        document.body.classList.add('dark');
+      } else {
+        document.body.classList.remove('dark');
+      }
+    }
   }
 }
