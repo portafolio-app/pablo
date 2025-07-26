@@ -1,37 +1,89 @@
+
 <footer class="bg-gray-900 text-gray-100 py-8 px-4">
   <hr class="border-t border-gray-700 mb-8" />
-  <div class="max-w-2xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start text-center md:text-left">
-    <!-- Columna 1: Nombre y enlaces rápidos -->
+  <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start text-center md:text-left">
+    <!-- Columna 1: Nombre y redes sociales -->
     <div class="flex flex-col items-center md:items-start">
-      <h2 class="text-xl font-bold mb-2"><span class="text-teal-400">Pablo Jose Manuel</span> Cruzado Garcia</h2>
-      <ul class="text-sm space-y-1">
-        <li><a href="#inicio" class="hover:text-teal-400 transition">Inicio</a></li>
-        <li><a href="#proyectos" class="hover:text-teal-400 transition">Proyectos</a></li>
-        <li><a href="#conocimientos" class="hover:text-teal-400 transition">Conocimientos</a></li>
-        <li><a href="#contactar" class="hover:text-teal-400 transition">Contactar</a></li>
+      <h2 class="text-xl font-bold mb-2">
+        <span class="text-green-400">Pablo Jose Manuel</span> Cruzado Garcia
+      </h2>
+      <span class="text-base font-semibold mb-2">Redes Sociales</span>
+      <div class="flex gap-3 mb-2">
+        <a href="https://github.com/PabloCruzadoG" target="_blank" class="inline-flex items-center justify-center w-10 h-10 rounded bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 transition">
+          <img src="https://cdn.jsdelivr.net/gh/tandpfun/skill-icons/icons/Github-Dark.svg" alt="GitHub" class="w-6 h-6" />
+        </a>
+        <a href="https://linkedin.com/pcruzadog" target="_blank" class="inline-flex items-center justify-center w-10 h-10 rounded bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 transition">
+          <img src="https://cdn.jsdelivr.net/gh/tandpfun/skill-icons/icons/LinkedIn.svg" alt="LinkedIn" class="w-6 h-6" />
+        </a>
+        <a href="mailto:nelcruzado2004@gmail.com" class="inline-flex items-center justify-center w-10 h-10 rounded bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 transition">
+          <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/>
+          </svg>
+        </a>
+      </div>
+      <div class="flex items-center gap-2 mt-2">
+        <span class="w-2 h-2 bg-green-500 rounded-full inline-block"></span>
+        <span class="text-green-400 text-xs font-semibold">Disponible para proyectos</span>
+      </div>
+    </div>
+    <!-- Columna 2: Especialidades -->
+    <div class="flex flex-col items-center md:items-start">
+      <h3 class="font-semibold mb-2">Especialidades</h3>
+      <ul class="text-sm space-y-2">
+        <li class="flex items-center gap-2"><i class="fas fa-laptop-code text-red-400"></i> <span>Desarrollo Frontend</span></li>
+        <li class="flex items-center gap-2"><i class="fas fa-server text-blue-400"></i> <span>Diseño UX/UI</span></li>
+        <li class="flex items-center gap-2"><i class="fas fa-mobile-alt text-green-400"></i> <span>Analista de Datos</span></li>
+        <li class="flex items-center gap-2"><i class="fas fa-desktop text-purple-400"></i> <span>Machine Learning</span></li>
+        <li class="flex items-center gap-2"><i class="fas fa-database text-orange-400"></i> <span>Bases de Datos</span></li>
       </ul>
     </div>
-    <!-- Columna 2: Información de contacto -->
+    <!-- Columna 3: Información de contacto -->
     <div class="flex flex-col items-center md:items-start">
       <h3 class="font-semibold mb-2">Información de Contacto</h3>
-      <ul class="text-sm space-y-1">
-        <li class="flex items-center gap-2"><i class="fas fa-envelope text-teal-400"></i> <span>Email</span></li>
-        <li class="flex items-center gap-2"><i class="fas fa-phone text-teal-400"></i> <span>Teléfono</span></li>
+      <ul class="text-sm space-y-2">
+        <li class="flex items-center gap-3">
+          <a href="mailto:nelcruzado2004@gmail.com" class="flex items-center gap-3 group">
+            <div class="w-10 h-10 rounded bg-gray-800 flex items-center justify-center group-hover:bg-gray-700 transition">
+              <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/>
+              </svg>
+            </div>
+            <div class="flex flex-col items-start">
+              <span class="font-semibold text-base group-hover:underline">Email</span>
+              <span class="text-xs text-gray-400">Contacto disponible</span>
+            </div>
+          </a>
+        </li>
+        <li class="flex items-center gap-3">
+          <a href="tel:+51958894566" class="flex items-center gap-3 group">
+            <div class="w-10 h-10 rounded bg-gray-800 flex items-center justify-center group-hover:bg-gray-700 transition">
+              <lord-icon src="https://cdn.lordicon.com/ssvybplt.json" trigger="hover" colors="primary:#fff,secondary:#fff" style="width:24px;height:24px;"></lord-icon>
+            </div>
+            <div class="flex flex-col items-start">
+              <span class="font-semibold text-base group-hover:underline">Teléfono</span>
+              <span class="text-xs text-gray-400">Disponible vía contacto</span>
+            </div>
+          </a>
+        </li>
+        <li class="flex items-center gap-3">
+          <a href="https://maps.google.com/?q=Trujillo, La Libertad, Perú" target="_blank" rel="noopener" class="flex items-center gap-3 group">
+            <div class="w-10 h-10 rounded bg-gray-800 flex items-center justify-center group-hover:bg-gray-700 transition">
+              <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z"/>
+              </svg>
+            </div>
+            <div class="flex flex-col items-start">
+              <span class="font-semibold text-base group-hover:underline">Ubicación</span>
+              <span class="text-xs text-gray-400">Trujillo, La Libertad, Perú</span>
+            </div>
+          </a>
+        </li>
       </ul>
-    </div>
-    <!-- Columna 3: Sobre el autor y redes -->
-    <div class="flex flex-col items-center md:items-start">
-      <h3 class="font-semibold mb-2">Sobre el Autor</h3>
-      <p class="text-sm mb-3">Desarrollador de software apasionado por crear soluciones eficientes, escalables y fáciles de usar.</p>
-      <div class="flex gap-4 text-2xl">
-        <a href="https://github.com/PabloCruzadoG" target="_blank" class="hover:text-teal-400 transition"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/pcruzadog" target="_blank" class="hover:text-teal-400 transition"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:nelcruzado2004@gmail.com" class="hover:text-teal-400 transition"><i class="fas fa-envelope"></i></a>
-      </div>
     </div>
   </div>
   <div class="flex justify-center mt-8 mb-4">
-    <div class="w-1/2 h-0.5 rounded-full" style="background: linear-gradient(90deg, transparent, #4b5563 40%, #9ca3af 50%, #4b5563 60%, transparent); opacity: 0.4;"></div>
+    <div class="w-3/4 h-0.5 rounded-full" style="background: linear-gradient(90deg, transparent, #4b5563 40%, #9ca3af 50%, #4b5563 60%, transparent); opacity: 0.4;"></div>
   </div>
   <div class="text-center text-xs text-gray-400">© 2025 Pablo Jose Manuel Cruzado Garcia. Todos los derechos reservados.</div>
 </footer>

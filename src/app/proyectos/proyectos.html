@@ -1,17 +1,19 @@
 <!-- Proyectos -->
 <section id="proyectos" class="max-w-4xl mx-auto px-4 py-4">
-  <h2 class="text-base font-semibold mb-3">Proyectos</h2>
+  <h2 class="text-base font-semibold mb-3 text-center">Proyectos</h2>
   <!-- Filtros -->
-  <div class="mb-2 flex gap-2 flex-wrap">
-    <button class="bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded text-xs text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700 transition">Todos</button>
-    <button class="bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded text-xs text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700 transition">Fullstack</button>
-    <button class="bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded text-xs text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700 transition">IA</button>
-    <button class="bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded text-xs text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700 transition">Pagos</button>
+  <div class="mb-6 flex gap-4 flex-wrap justify-center">
+    <button class="filtro-btn bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded-lg border-2 border-transparent text-xs text-gray-700 dark:text-gray-200 transition font-semibold hover:bg-gray-700 hover:text-white" data-categoria="Todos">Todos</button>
+    <button class="filtro-btn bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded-lg border-2 border-transparent text-xs text-pink-600 dark:text-pink-400 transition font-semibold hover:bg-pink-600 hover:text-white" data-categoria="UX">Diseño UX/UI</button>
+    <button class="filtro-btn bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded-lg border-2 border-transparent text-xs text-blue-600 dark:text-blue-400 transition font-semibold hover:bg-blue-600 hover:text-white" data-categoria="Datos">Análisis de datos</button>
+    <button class="filtro-btn bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded-lg border-2 border-transparent text-xs text-green-700 dark:text-green-400 transition font-semibold hover:bg-green-700 hover:text-white" data-categoria="ML">Machine learning</button>
+    <button class="filtro-btn bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded-lg border-2 border-transparent text-xs text-blue-700 dark:text-blue-400 transition font-semibold hover:bg-blue-700 hover:text-white" data-categoria="Frontend">Frontend</button>
+    <button class="filtro-btn bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded-lg border-2 border-transparent text-xs text-yellow-700 dark:text-yellow-300 transition font-semibold hover:bg-yellow-400 hover:text-yellow-900" data-categoria="Destacados">Destacados</button>
   </div>
   <!-- Lista de proyectos -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
-    <!-- Card de Proyecto Ejemplo -->
-    <div class="bg-gray-800 rounded-xl shadow-lg p-0 flex flex-col border border-gray-700 hover:shadow-2xl transition-all duration-300 w-full" style="min-height: 24rem; max-height: 24rem; max-width: 32rem;">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="proyectos-lista">
+    <!-- Card de Proyecto 1 (Frontend) -->
+    <div class="bg-gray-800 rounded-xl shadow-lg p-0 flex flex-col border border-gray-700 hover:shadow-2xl transition-all duration-300 w-full proyecto-card" data-categoria="ML" style="min-height: 24rem; max-height: 24rem; max-width: 32rem;">
       <!-- Carrusel de imágenes manual -->
       <div class="relative w-full h-32">
         <img id="img-proyecto-1-0" src="proyecto1-1.png" alt="Imagen 1" class="rounded-t-xl w-full h-32 object-cover block" style="display: block;">
@@ -22,7 +24,7 @@
         <button type="button" onclick="cambiarImagenProyecto1(1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-gray-900/70 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs z-10">&#8594;</button>
         <span class="absolute top-2 right-2 bg-green-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full flex items-center gap-1 z-10">
           <svg class="w-3 h-3 inline" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Destacado
+          Destacados
         </span>
       </div>
       <!-- Contenido -->
@@ -48,18 +50,215 @@
         <a href="#" class="block text-center text-[10px] text-green-400 border border-green-700 rounded py-1 hover:bg-green-900/30 transition">Ver más detalles</a>
       </div>
     </div>
-    <!-- Puedes duplicar la card para más proyectos -->
+    <!-- Card de Proyecto 2 (UX) -->
+    <div class="bg-gray-800 rounded-xl shadow-lg p-0 flex flex-col border border-gray-700 hover:shadow-2xl transition-all duration-300 w-full proyecto-card" data-categoria="Datos" style="min-height: 24rem; max-height: 24rem; max-width: 32rem;">
+      <div class="relative w-full h-32">
+        <img src="proyecto2-1.png" alt="Imagen 1" class="rounded-t-xl w-full h-32 object-cover block">
+        <img src="proyecto2-2.png" alt="Imagen 2" class="rounded-t-xl w-full h-32 object-cover absolute top-0 left-0" style="display: none;">
+        <img src="proyecto2-3.png" alt="Imagen 3" class="rounded-t-xl w-full h-32 object-cover absolute top-0 left-0" style="display: none;">
+        <span class="absolute top-2 right-2 bg-blue-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full flex items-center gap-1 z-10">
+          <svg class="w-3 h-3 inline" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Nuevo
+        </span>
+      </div>
+      <div class="p-4 flex flex-col flex-1">
+        <h3 class="text-white text-xs font-bold mb-1 truncate">App de Gestión de Tareas</h3>
+        <p class="text-gray-300 text-[11px] mb-3 text-justify">Aplicación para organizar tareas diarias, con notificaciones y sincronización en la nube.</p>
+        <div class="flex flex-wrap gap-2 mb-3">
+          <span class="bg-green-600/90 text-white text-[9px] px-2 py-0.5 rounded flex items-center gap-1"><i class="fab fa-vuejs"></i> Vue.js</span>
+          <span class="bg-gray-600/90 text-white text-[9px] px-2 py-0.5 rounded flex items-center gap-1"><i class="fab fa-node-js"></i> Node.js</span>
+          <span class="bg-blue-500/90 text-white text-[9px] px-2 py-0.5 rounded flex items-center gap-1"><i class="fab fa-js"></i> JavaScript</span>
+        </div>
+        <div class="flex gap-2 mb-2">
+          <a href="https://github.com/usuario/proyecto2" target="_blank" class="flex-1 bg-gray-700 hover:bg-gray-600 text-white text-[10px] font-semibold py-1 rounded transition flex items-center justify-center gap-2">
+            <i class="fas fa-code"></i> Código Fuente
+          </a>
+          <a href="https://proyecto2.com" target="_blank" class="flex-1 bg-green-600 hover:bg-green-700 text-white text-[10px] font-semibold py-1 rounded transition flex items-center justify-center gap-2">
+            <i class="fas fa-play"></i> Demo en Vivo
+          </a>
+        </div>
+        <a href="#" class="block text-center text-[10px] text-blue-400 border border-blue-700 rounded py-1 hover:bg-blue-900/30 transition">Ver más detalles</a>
+      </div>
+    </div>
+    <!-- Card de Proyecto 3 (UX) -->
+    <div class="bg-gray-800 rounded-xl shadow-lg p-0 flex flex-col border border-gray-700 hover:shadow-2xl transition-all duration-300 w-full proyecto-card" data-categoria="Frontend" style="min-height: 24rem; max-height: 24rem; max-width: 32rem;">
+      <div class="relative w-full h-32">
+        <img src="proyecto2-1.png" alt="Imagen 1" class="rounded-t-xl w-full h-32 object-cover block">
+        <img src="proyecto2-2.png" alt="Imagen 2" class="rounded-t-xl w-full h-32 object-cover absolute top-0 left-0" style="display: none;">
+        <img src="proyecto2-3.png" alt="Imagen 3" class="rounded-t-xl w-full h-32 object-cover absolute top-0 left-0" style="display: none;">
+        <span class="absolute top-2 right-2 bg-blue-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full flex items-center gap-1 z-10">
+          <svg class="w-3 h-3 inline" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Nuevo
+        </span>
+      </div>
+      <div class="p-4 flex flex-col flex-1">
+        <h3 class="text-white text-xs font-bold mb-1 truncate">App de Gestión de Tareas</h3>
+        <p class="text-gray-300 text-[11px] mb-3 text-justify">Aplicación para organizar tareas diarias, con notificaciones y sincronización en la nube.</p>
+        <div class="flex flex-wrap gap-2 mb-3">
+          <span class="bg-green-600/90 text-white text-[9px] px-2 py-0.5 rounded flex items-center gap-1"><i class="fab fa-vuejs"></i> Vue.js</span>
+          <span class="bg-gray-600/90 text-white text-[9px] px-2 py-0.5 rounded flex items-center gap-1"><i class="fab fa-node-js"></i> Node.js</span>
+          <span class="bg-blue-500/90 text-white text-[9px] px-2 py-0.5 rounded flex items-center gap-1"><i class="fab fa-js"></i> JavaScript</span>
+        </div>
+        <div class="flex gap-2 mb-2">
+          <a href="https://github.com/usuario/proyecto2" target="_blank" class="flex-1 bg-gray-700 hover:bg-gray-600 text-white text-[10px] font-semibold py-1 rounded transition flex items-center justify-center gap-2">
+            <i class="fas fa-code"></i> Código Fuente
+          </a>
+          <a href="https://proyecto2.com" target="_blank" class="flex-1 bg-green-600 hover:bg-green-700 text-white text-[10px] font-semibold py-1 rounded transition flex items-center justify-center gap-2">
+            <i class="fas fa-play"></i> Demo en Vivo
+          </a>
+        </div>
+        <a href="#" class="block text-center text-[10px] text-blue-400 border border-blue-700 rounded py-1 hover:bg-blue-900/30 transition">Ver más detalles</a>
+      </div>
+    </div>
+    <!-- Card de Proyecto 4 (UX) -->
+    <div class="bg-gray-800 rounded-xl shadow-lg p-0 flex flex-col border border-gray-700 hover:shadow-2xl transition-all duration-300 w-full proyecto-card" data-categoria="UX" style="min-height: 24rem; max-height: 24rem; max-width: 32rem;">
+      <div class="relative w-full h-32">
+        <img src="proyecto2-1.png" alt="Imagen 1" class="rounded-t-xl w-full h-32 object-cover block">
+        <img src="proyecto2-2.png" alt="Imagen 2" class="rounded-t-xl w-full h-32 object-cover absolute top-0 left-0" style="display: none;">
+        <img src="proyecto2-3.png" alt="Imagen 3" class="rounded-t-xl w-full h-32 object-cover absolute top-0 left-0" style="display: none;">
+        <span class="absolute top-2 right-2 bg-blue-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full flex items-center gap-1 z-10">
+          <svg class="w-3 h-3 inline" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Nuevo
+        </span>
+      </div>
+      <div class="p-4 flex flex-col flex-1">
+        <h3 class="text-white text-xs font-bold mb-1 truncate">App de Gestión de Tareas</h3>
+        <p class="text-gray-300 text-[11px] mb-3 text-justify">Aplicación para organizar tareas diarias, con notificaciones y sincronización en la nube.</p>
+        <div class="flex flex-wrap gap-2 mb-3">
+          <span class="bg-green-600/90 text-white text-[9px] px-2 py-0.5 rounded flex items-center gap-1"><i class="fab fa-vuejs"></i> Vue.js</span>
+          <span class="bg-gray-600/90 text-white text-[9px] px-2 py-0.5 rounded flex items-center gap-1"><i class="fab fa-node-js"></i> Node.js</span>
+          <span class="bg-blue-500/90 text-white text-[9px] px-2 py-0.5 rounded flex items-center gap-1"><i class="fab fa-js"></i> JavaScript</span>
+        </div>
+        <div class="flex gap-2 mb-2">
+          <a href="https://github.com/usuario/proyecto2" target="_blank" class="flex-1 bg-gray-700 hover:bg-gray-600 text-white text-[10px] font-semibold py-1 rounded transition flex items-center justify-center gap-2">
+            <i class="fas fa-code"></i> Código Fuente
+          </a>
+          <a href="https://proyecto2.com" target="_blank" class="flex-1 bg-green-600 hover:bg-green-700 text-white text-[10px] font-semibold py-1 rounded transition flex items-center justify-center gap-2">
+            <i class="fas fa-play"></i> Demo en Vivo
+          </a>
+        </div>
+        <a href="#" class="block text-center text-[10px] text-blue-400 border border-blue-700 rounded py-1 hover:bg-blue-900/30 transition">Ver más detalles</a>
+      </div>
+    </div>
+    <!-- Card de Proyecto 5 (UX) -->
+    <div class="bg-gray-800 rounded-xl shadow-lg p-0 flex flex-col border border-gray-700 hover:shadow-2xl transition-all duration-300 w-full proyecto-card" data-categoria="Destacados" style="min-height: 24rem; max-height: 24rem; max-width: 32rem;">
+      <div class="relative w-full h-32">
+        <img src="proyecto5-1.png" alt="Imagen 1" class="rounded-t-xl w-full h-32 object-cover block">
+        <span class="absolute top-2 right-2 bg-pink-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full flex items-center gap-1 z-10">UX/UI</span>
+      </div>
+      <div class="p-4 flex flex-col flex-1">
+        <h3 class="text-white text-xs font-bold mb-1 truncate">Rediseño de Landing Page</h3>
+        <p class="text-gray-300 text-[11px] mb-3 text-justify">Mejoras visuales y de experiencia de usuario para aumentar la conversión de clientes.</p>
+        <div class="flex flex-wrap gap-2 mb-3">
+          <span class="bg-pink-600/90 text-white text-[9px] px-2 py-0.5 rounded flex items-center gap-1"><i class="fab fa-figma"></i> Figma</span>
+          <span class="bg-blue-600/90 text-white text-[9px] px-2 py-0.5 rounded flex items-center gap-1"><i class="fab fa-js"></i> JavaScript</span>
+          <span class="bg-gray-700/90 text-white text-[9px] px-2 py-0.5 rounded flex items-center gap-1"><i class="fab fa-css3-alt"></i> CSS</span>
+        </div>
+        <div class="flex gap-2 mb-2">
+          <a href="https://github.com/usuario/proyecto5" target="_blank" class="flex-1 bg-gray-700 hover:bg-gray-600 text-white text-[10px] font-semibold py-1 rounded transition flex items-center justify-center gap-2">
+            <i class="fas fa-code"></i> Código Fuente
+          </a>
+          <a href="https://proyecto5.com" target="_blank" class="flex-1 bg-green-600 hover:bg-green-700 text-white text-[10px] font-semibold py-1 rounded transition flex items-center justify-center gap-2">
+            <i class="fas fa-play"></i> Demo en Vivo
+          </a>
+        </div>
+        <a href="#" class="block text-center text-[10px] text-pink-400 border border-pink-700 rounded py-1 hover:bg-pink-900/30 transition">Ver más detalles</a>
+      </div>
+    </div>
+    <!-- Card de Proyecto 6 (ML) -->
+    <div class="bg-gray-800 rounded-xl shadow-lg p-0 flex flex-col border border-gray-700 hover:shadow-2xl transition-all duration-300 w-full proyecto-card" data-categoria="UX" style="min-height: 24rem; max-height: 24rem; max-width: 32rem;">
+      <div class="relative w-full h-32">
+        <img src="proyecto6-1.png" alt="Imagen 1" class="rounded-t-xl w-full h-32 object-cover block">
+        <span class="absolute top-2 right-2 bg-green-700 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full flex items-center gap-1 z-10">Machine Learning</span>
+      </div>
+      <div class="p-4 flex flex-col flex-1">
+        <h3 class="text-white text-xs font-bold mb-1 truncate">Clasificador de Imágenes</h3>
+        <p class="text-gray-300 text-[11px] mb-3 text-justify">Modelo de IA para identificar objetos en imágenes con alta precisión.</p>
+        <div class="flex flex-wrap gap-2 mb-3">
+          <span class="bg-green-700/90 text-white text-[9px] px-2 py-0.5 rounded flex items-center gap-1"><i class="fab fa-python"></i> Python</span>
+          <span class="bg-blue-600/90 text-white text-[9px] px-2 py-0.5 rounded flex items-center gap-1"><i class="fab fa-js"></i> JavaScript</span>
+          <span class="bg-gray-700/90 text-white text-[9px] px-2 py-0.5 rounded flex items-center gap-1"><i class="fab fa-docker"></i> Docker</span>
+        </div>
+        <div class="flex gap-2 mb-2">
+          <a href="https://github.com/usuario/proyecto6" target="_blank" class="flex-1 bg-gray-700 hover:bg-gray-600 text-white text-[10px] font-semibold py-1 rounded transition flex items-center justify-center gap-2">
+            <i class="fas fa-code"></i> Código Fuente
+          </a>
+          <a href="https://proyecto6.com" target="_blank" class="flex-1 bg-green-600 hover:bg-green-700 text-white text-[10px] font-semibold py-1 rounded transition flex items-center justify-center gap-2">
+            <i class="fas fa-play"></i> Demo en Vivo
+          </a>
+        </div>
+        <a href="#" class="block text-center text-[10px] text-green-400 border border-green-700 rounded py-1 hover:bg-green-900/30 transition">Ver más detalles</a>
+      </div>
+    </div>
   </div>
-</section>
-
+  <div class="flex justify-center mt-4">
+    <button id="ver-mas-btn" class="text-green-400 border border-green-700 rounded px-4 py-1 text-xs hover:bg-green-900/30 transition">Ver Más Proyectos</button>
+  </div>
 <script>
-// Carrusel manual para la primera card (puedes replicar la lógica para más cards)
-let imgIndexProyecto1 = 0;
-function cambiarImagenProyecto1(dir) {
-  const total = 3;
-  imgIndexProyecto1 = (imgIndexProyecto1 + dir + total) % total;
-  for (let i = 0; i < total; i++) {
-    document.getElementById(`img-proyecto-1-${i}`).style.display = i === imgIndexProyecto1 ? 'block' : 'none';
+// Filtro funcional por categoría, con botón activo y bordes marcados y lógica de mostrar/ocultar proyectos
+window.onload = function() {
+  const filtroBtns = document.querySelectorAll('.filtro-btn');
+  const cards = document.querySelectorAll('.proyecto-card');
+  const verMasBtn = document.getElementById('ver-mas-btn');
+  let mostrarTodos = false;
+  let filtroActual = 'Todos';
+
+  function actualizarVista() {
+    let visibles = 0;
+    cards.forEach((card) => {
+      // Filtro
+      let mostrar = false;
+      if (filtroActual === 'Todos') {
+        mostrar = true;
+      } else if (filtroActual === 'Destacados') {
+        const destacado = card.querySelector('.bg-green-600');
+        mostrar = !!destacado;
+      } else {
+        mostrar = card.getAttribute('data-categoria') === filtroActual;
+      }
+      // Mostrar solo los primeros 6 si no está expandido
+      if (mostrar) {
+        visibles++;
+        if (!mostrarTodos && visibles > 6) {
+          card.style.display = 'none';
+        } else {
+          card.style.display = '';
+        }
+      } else {
+        card.style.display = 'none';
+      }
+    });
+    // Mostrar/ocultar botón
+    if (!mostrarTodos && visibles > 6) {
+      verMasBtn.style.display = '';
+    } else {
+      verMasBtn.style.display = 'none';
+    }
   }
-}
+
+  filtroBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      filtroActual = btn.getAttribute('data-categoria');
+      mostrarTodos = false;
+      filtroBtns.forEach(b => {
+        b.classList.remove('bg-green-500', 'text-white', 'border-green-600', 'bg-yellow-400', 'text-yellow-900', 'border-yellow-500');
+        b.classList.add('border-transparent');
+      });
+      btn.classList.remove('border-transparent');
+      if (filtroActual === 'Destacados') {
+        btn.classList.add('bg-yellow-400', 'text-yellow-900', 'border-yellow-500');
+      } else {
+        btn.classList.add('bg-green-500', 'text-white', 'border-green-600');
+      }
+      actualizarVista();
+    });
+  });
+
+  verMasBtn.addEventListener('click', function() {
+    mostrarTodos = true;
+    actualizarVista();
+  });
+
+  actualizarVista();
+};
 </script>

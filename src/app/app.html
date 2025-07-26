@@ -1,6 +1,5 @@
 <app-navbar></app-navbar>
-<main class="min-h-screen bg-gray-900 text-gray-100 flex flex-col items-center justify-center px-2 py-8">
-  <div class="w-full max-w-2xl flex flex-col gap-8">
+<div class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex flex-col w-full px-2 py-8 gap-8">
     <section>
       <app-perfil></app-perfil>
     </section>
@@ -8,11 +7,8 @@
       <app-sobre-mi></app-sobre-mi>
     </section>
     <section class="flex flex-col md:flex-row gap-8">
-      <div class="flex-1 mb-0">
+      <div class="w-full mb-0">
         <app-educacion></app-educacion>
-      </div>
-      <div class="flex-1 mb-0">
-        <app-certificaciones></app-certificaciones>
       </div>
     </section>
     <section>
@@ -21,7 +17,4 @@
     <section>
       <app-habilidades></app-habilidades>
     </section>
-  </div>
-</main>
 <app-footer></app-footer>
-
