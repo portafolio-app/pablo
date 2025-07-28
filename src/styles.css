@@ -1,2 +1,31 @@
 @import "tailwindcss";
 @import "flowbite/src/themes/default";
+
+/* Para Tailwind v4 con Flowbite - CRUCIAL para que funcione el modo oscuro */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Transiciones suaves para el cambio de tema */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Asegurar que el tema se aplique correctamente */
+.dark {
+  color-scheme: dark;
+}
+
+html:not(.dark) {
+  color-scheme: light;
+}
+
+/* Forzar estilos base para el modo claro */
+html:not(.dark) body {
+  background-color: white;
+  color: #111827;
+}
+
+/* Forzar estilos base para el modo oscuro */
+html.dark body {
+  background-color: #111827;
+  color: #f9fafb;
+}

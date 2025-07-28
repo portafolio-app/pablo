@@ -1,4 +1,4 @@
-import { Component, signal, OnInit } from '@angular/core';
+import { Component, signal, OnInit, inject } from '@angular/core';
 import { initFlowbite } from 'flowbite';
 import { RouterOutlet } from '@angular/router';
 import { Perfil } from './perfil/perfil';
@@ -8,6 +8,8 @@ import { Proyectos } from './proyectos/proyectos';
 import { Habilidades } from './habilidades/habilidades';
 import { Navbar } from './navbar/navbar';
 import { FooterComponent } from './footer/footer';
+import { ThemeService } from './theme/ThemeService';
+
 
 @Component({
   selector: 'app-root',
@@ -25,6 +27,9 @@ import { FooterComponent } from './footer/footer';
 })
 export class App implements OnInit {
   protected readonly title = signal('portafolio-angular');
+
+  // Inyectar el servicio para inicializarlo
+  private themeService = inject(ThemeService);
 
   ngOnInit(): void {
     if (typeof window !== 'undefined' && typeof document !== 'undefined') {
